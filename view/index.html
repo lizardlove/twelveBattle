@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+        	* {
+        		margin: 0;
+        		padding: 0;
+        	}
+        	canvas {
+        		display: block;
+        		margin: auto;
+        		position: absolute;
+        		top: 0;
+        		bottom: 0;
+        		left: 0;
+        		right: 0;
+        	}
+        	#bg {
+        		z-index: 1;
+        	}
+        	#master {
+        		z-index: 5;
+        		background: transparent;
+        	}
+        </style>
+    </head>
+    <script src="../public/javascripts/jquery-3.2.1.js"></script>
+    <script src="../public/javascripts/view.js"></script>
+    <script src="../public/javascripts/sprite.js"></script>
+    <body>
+    <canvas id="bg"></canvas>
+    <canvas id="master"></canvas>
+    </body>
+    <script src="../public/javascripts/main.js"></script>
+</html>

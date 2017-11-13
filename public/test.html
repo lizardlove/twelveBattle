@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        	* {
+        		margin: 0;
+        		padding: 0;
+        	}
+        	canvas {
+        		display: block;
+        		margin: auto;
+        		position: absolute;
+        		top: 0;
+        		bottom: 0;
+        		left: 0;
+        		right: 0;
+        	}
+        	#bg {
+        		z-index: 1;
+        	}
+        </style>
+    </head>
+    <script src="./javascripts/resources.js"></script>
+    <script src="./javascripts/map.js"></script>
+    <body>
+        <canvas id="bg"></canvas>
+    </body>
+    <script src="./javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+    var golbal  = new Object();
+    function init() {
+        var ob = {
+            order: 2
+        }
+    	$.ajax({
+    		type: "POST",
+    		url: "/map",
+    		async: false,
+            data: ob,
+    		success: function (data) {
+    			var data = JSON.parse(data);
+    			golbal.scene = data;
+    		}
+    	});
+    	var map = new Maps({
+    		width: golbal.scene.width,
+    		height: golbal.scene.height,
+    		scene: golbal.scene
+    	})
+    	map.render(golbal.scene);
+    	var WIDHT = $(window).width();
+    	var HEIGHT = $(window).height();
+    	var bg = $("#bg")[0];
+    	bg.width = WIDHT;
+    	bg.height = HEIGHT;
+    	var ctx = bg.getContext("2d");
+    	ctx.drawImage(map.canvas, 0, 0, map.width, map.height, 0, 0, WIDHT, HEIGHT);
+    }
+    setTimeout(function () {
+    	init();
+    }, 1000);
+    </script>
+</html>

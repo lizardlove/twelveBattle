@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="./stylesheets/index.css">
+    </head>
+    <script src="./javascripts/jquery-3.2.1.js"></script>
+    <script src="./javascripts/resources.js"></script>
+    <script src="./javascripts/view.js"></script>
+    <script src="./javascripts/sprite.js"></script>
+    <script src="./javascripts/map.js"></script>
+    <body>
+    <canvas id="bg"></canvas>
+    <canvas id="master"></canvas>
+    <div id="init">
+        <div id="name">十二生肖</div>
+        <div id="start">开始</div>
+        <div id="help">帮助</div>
+        <img src="./images/bg.png"></img>
+        <div id="alert">
+            <div class="num" data-value="1">1</div>
+            <div class="num" data-value="2">2</div>
+            <div id="close">取消</div>
+        </div>
+        <div id="correct">
+            <div id="goBack">返回</div>
+            <div id="GO">GO</div>
+        </div>
+        <div id="helpDet">
+            <p>一款2D空间翻转解密逃生游戏</p>
+            <p><span>游戏方式：</span> 通过空间移动与翻转，探索地图和机关设置，并找到出路。</p>
+            <p><span>操作设置：</span>AD左右移动，W跳跃，JL左右翻转，I上下翻转</p>
+            <p><span>创意灵感：</span>十二生肖是中国传统文化重要元素之一，动物与人也是永恒不变的话题，创意灵感源于95年版动画十二生肖以及纪念碑谷，每个动物都能发挥特定作用协助人，与2维空间翻转结合进行解密逃生的游戏，与常规2D关卡类游戏有不一样的游戏体验</p>
+            <div id="back">返回</div>
+        </div>
+    </div>
+    <div id="interactive">
+        <div id="headBox">
+            <div id="headInfo">
+                <div id="headImg">
+                    <img src="./images/head.png">
+                </div>
+                <div id="headName">菜鸟屋舍</div>
+            </div>
+            <div id="skillBox">
+            </div>
+        </div>
+        <div id="choice">
+            <p id="text">6666xcbvngmhjkgjgjfgdfgdg</p>
+            <div id="buttonBox">
+                <div id="over" class="close">返回</div>
+                <div id="next" class="close">再来</div>
+            </div>
+        </div>
+        <div id="dialogue">
+            <div id="close">
+                <img src="./images/close.png">
+            </div>
+            <p>恭喜！获得子鼠之力</p>
+            <p> ————水月洞天</p>
+            <div id="skillDet">
+                <div id="skill">功能描述：</div>
+                <p>使用鼠符咒时能变换为鼠形态，可以挖掘通过一些特定的隧道.持续时间： 10s</p>
+            </div>
+        </div>
+    </div>
+    <div id="final">
+        <div id="finalBg">
+            <img src="./images/post.png">
+        </div>
+        <div id="det">
+            <p>经过你不懈的努力，十二生肖终于又重聚一堂。大家集众志之力，开万卷之书，祛除万恶，年兽的帮手们已经被消灭。终于只剩下我们的老朋友年兽了，让他走吧，我们也该开始庆祝我们的节日了！</p>
+            <div id="back">完成</div>
+        </div>
+    </div>
+    <script src="./javascripts/main.js"></script>
+</html>
